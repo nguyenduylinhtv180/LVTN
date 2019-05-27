@@ -15,8 +15,8 @@
  * @author Cornelius Schwarz
  */
 
-#ifndef QUEENS_H
-#define QUEENS_H
+#ifndef IP_H
+#define IP_H
 
 #include <vector>
 #include <iostream>
@@ -38,7 +38,7 @@ namespace scipexamples
     *
     *  this class implements a solver for the n-queens problem as an mip model, which will be solved using SCIP
     */
-   class QueensSolver
+   class IP
    {
    private:
 
@@ -60,7 +60,14 @@ namespace scipexamples
        * value of each variable in the solution, we have to store
        * these pointers.
        */
+
 	  std::vector<std::vector<std::vector<SCIP_VAR*>> > _vars;
+
+	  ///////2_YESBIN_1STA_NOMERGED//////////////
+
+	  std::vector<std::vector<SCIP_VAR*> > _varYC;
+	  std::vector<std::vector<SCIP_VAR*> > _varYF;
+
 
       /** @brief constraints for rows, cols and diags of the chess board
        *
@@ -78,13 +85,13 @@ namespace scipexamples
        * the constructor builds a BP model in scip for the n-queens problem
        * @param[in] n the number of queens
        */
-      QueensSolver(Allocation& allo);
+      IP(Allocation& allo);
 
       /** @brief destructor this is the place to release the SCIP_VAR
        * and SCIP_CONS pointers and to free the SCIP pointer
        * afterwards
        */
-      ~QueensSolver();
+      ~IP();
 
       void solve(void); ///< solves the queens problem using SCIPsolve
 
