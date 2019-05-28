@@ -3,9 +3,9 @@
 /*                  This file is part of the examples to                     */
 /*                         An introduction to SCIP                           */
 /*                                                                           */
-/*    Copyright (C) 2007 Cornelius Schwarz                                   */
+/*    Nguyen Duy Linh                                   */
 /*                                                                           */
-/*                  2007 University of Bayreuth                              */
+/*                  SMTI                              */
 /*                                                                           */
 /*                                                                           */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
