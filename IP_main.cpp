@@ -75,11 +75,13 @@ main(
 	   solver.disp(allo);
 	   allo.printSol();
 	   allo.checkSolution();
+	   cout << "aaaa" << endl;
 	   allo.printInfo(pathAndFileout);
 
    }
    catch (const SCIPException & exc)
    {
+	   cout << "BBBBB" << endl;
       cerr << exc.what() << endl;
       exit((int) exc.getRetcode());
    }
@@ -88,7 +90,7 @@ main(
 
 
    system("pause");
-   return 0;
+   return EXIT_SUCCESS;
 
 
 
